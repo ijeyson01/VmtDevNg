@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-miprimercomponente',
   templateUrl: './miprimercomponente.component.html'
 })
 export class MiprimercomponenteComponent {
+
+
+  @Output()
+  banderaAutenticacion = new EventEmitter<string>();
+
 
   nombreusuario: string = '';
   passwordusuario: string = '';
@@ -16,4 +21,7 @@ export class MiprimercomponenteComponent {
     });
   }
 
+  eventoCambioPantalla(){
+    this.banderaAutenticacion.emit("CAMBIO");
+  }
 }

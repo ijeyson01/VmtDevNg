@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center">
-    <form action="">
+<div class="d-flex justify-content-center mt-3">
+    <form action="" autocomplete="off">
         <div>
             <div class="display-6 ">
                 LOGIN
@@ -12,21 +12,28 @@
                          <label for="emailusuario">Usuario</label>
                      </div>
                      <div>
-                        <input [(ngModel)]="nombreusuario" type="email" (ngModelChange)="mostrarNombre()" name="emailusuario" id="emailusuarioid" placeholder="Ingrese su email">
+                        <input class="form-control" [(ngModel)]="nombreusuario" type="email" (ngModelChange)="mostrarNombre()" name="emailusuario" id="emailusuarioid" placeholder="Ingrese su email">
                      </div>
                      <div>
                         <label for="contraseniapassword">Contrase&ntilde;a</label>
                      </div>
                      <div>
-                        <input [(ngModel)]="passwordusuario" type="password" name="contraseniapassword" id="contraseniapasswordid">
+                        <input 
+                        class="form-control"
+                        [(ngModel)]="passwordusuario" type="password" 
+                        placeholder="Ingrese su contrase&ntilde;a"
+                        name="contraseniapassword" id="contraseniapasswordid">
                      </div>
                  </div>
                  <br>
-                 <div class="btn-group">
-                    <div class="bi bi-airplane">
-                        <input class=" btn btn-primary" type="button" value="Iniciar sesi&oacute;n" (click)="mostrarNombre()">
+                 <div>
+                    <div>
+                        <input class="btn btn-primary" type="button" value="Iniciar sesi&oacute;n" (click)="mostrarNombre()">
                     </div>
-                    
+                    <br>
+                    <div>
+                        <a href="#" (click)="eventoCambioPantalla()"> Registrarse</a>
+                    </div>
                  </div>
             </div>
         </div>

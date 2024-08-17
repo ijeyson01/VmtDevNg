@@ -1,0 +1,6 @@
+<div *ngIf="(pantallaPresentacion === 'LOGIN')">
+    <app-miprimercomponente (banderaAutenticacion)="toggleAutentication($event)"></app-miprimercomponente>
+</div>
+<div *ngIf="(pantallaPresentacion !== 'LOGIN')" >
+    <app-registrousuario></app-registrousuario>
+</div>
