@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
 })
 export class MiprimercomponenteComponent {
 
+  nombreusuario: string = '';
+  passwordusuario: string = '';
+
+  mostrarNombre() {
+    console.log({
+      'usuario': this.nombreusuario, 
+      'pass': this.passwordusuario
+    });
+  }
+
 }

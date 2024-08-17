@@ -12,20 +12,21 @@
                          <label for="emailusuario">Usuario</label>
                      </div>
                      <div>
-                        <input type="email" name="emailusuario" id="emailusuarioid" placeholder="Ingrese su email">
+                        <input [(ngModel)]="nombreusuario" type="email" (ngModelChange)="mostrarNombre()" name="emailusuario" id="emailusuarioid" placeholder="Ingrese su email">
                      </div>
                      <div>
                         <label for="contraseniapassword">Contrase&ntilde;a</label>
                      </div>
                      <div>
-                        <input type="password" name="contraseniapassword" id="contraseniapasswordid">
+                        <input [(ngModel)]="passwordusuario" type="password" name="contraseniapassword" id="contraseniapasswordid">
                      </div>
                  </div>
                  <br>
                  <div class="btn-group">
                     <div class="bi bi-airplane">
-                        <input class=" btn btn-primary" type="button" value="Iniciar sesi&oacute;n">
+                        <input class=" btn btn-primary" type="button" value="Iniciar sesi&oacute;n" (click)="mostrarNombre()">
                     </div>
+                    
                  </div>
             </div>
         </div>
