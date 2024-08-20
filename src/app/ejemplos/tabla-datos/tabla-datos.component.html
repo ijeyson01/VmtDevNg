@@ -1,0 +1,24 @@
+<!-- Agregar un dropdown con las ciudades -->
+
+<br>
+<br>
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Ciudad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of lusuarios" >
+            <th scope="row"> {{ usuario.n }}</th>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.edad }}</td>
+            <td>{{ usuario.ciudad }} </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

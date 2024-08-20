@@ -1,6 +1,6 @@
 <div *ngIf="(pantallaPresentacion === 'LOGIN')">
-    <app-miprimercomponente (banderaAutenticacion)="toggleAutentication($event)"></app-miprimercomponente>
+    <app-miprimercomponente (banderaAutenticacion)="toggleAutentication($event)" [valorData]="mailDefecto"></app-miprimercomponente>
 </div>
-<div *ngIf="(pantallaPresentacion !== 'LOGIN')" >
-    <app-registrousuario></app-registrousuario>
+<div *ngIf="(pantallaPresentacion === 'REGISTRO')" >
+    <app-registrousuario (eventoVolverInicio)="toggleAutentication($event)"></app-registrousuario>
 </div>

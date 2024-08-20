@@ -7,13 +7,15 @@ import { MiprimercomponenteComponent } from './ejemplos/miprimercomponente/mipri
 import { FormsModule } from '@angular/forms';
 import { RegistrousuarioComponent } from './ejemplos/registrousuario/registrousuario.component';
 import { AutenticacionComponent } from './ejemplos/autenticacion/autenticacion.component';
+import { TablaDatosComponent } from './ejemplos/tabla-datos/tabla-datos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MiprimercomponenteComponent,
     RegistrousuarioComponent,
-    AutenticacionComponent
+    AutenticacionComponent,
+    TablaDatosComponent
   ],
   imports: [
     BrowserModule,

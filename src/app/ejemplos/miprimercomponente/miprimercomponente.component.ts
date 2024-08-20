@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-miprimercomponente',
@@ -7,8 +7,15 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class MiprimercomponenteComponent {
 
 
+  constructor(){
+  }
+
+
   @Output()
   banderaAutenticacion = new EventEmitter<string>();
+
+  @Input()
+  valorData?: string;
 
 
   nombreusuario: string = '';
@@ -22,6 +29,6 @@ export class MiprimercomponenteComponent {
   }
 
   eventoCambioPantalla(){
-    this.banderaAutenticacion.emit("CAMBIO");
+    this.banderaAutenticacion.emit("REGISTRO");
   }
 }

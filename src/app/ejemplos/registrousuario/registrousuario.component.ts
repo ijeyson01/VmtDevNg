@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-registrousuario',
@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class RegistrousuarioComponent {
 
-  
+  @Output() eventoVolverInicio = new EventEmitter<string>();
 
-  eventoRandom() {}
+  volverInicio() {
+    this.eventoVolverInicio.emit('LOGIN');
+  }
 }
