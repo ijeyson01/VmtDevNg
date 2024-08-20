@@ -1,4 +1,9 @@
 <!-- Agregar un dropdown con las ciudades -->
+<div>
+  <select class="form-select">
+      <option *ngFor="let ciudad of lciudades" [value]="ciudad.idciudad"> {{ ciudad.ciudad }}</option>
+  </select>
+</div>
 
 <br>
 <br>
