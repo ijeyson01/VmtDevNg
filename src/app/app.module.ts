@@ -12,6 +12,8 @@ import { EjemploNgTemplateComponent } from './ejemplos/ejemplo-ng-template/ejemp
 import { HeaderComponent } from './shared/header/header.component';
 import { ModuloPadreComponent } from './modulo-padre/modulo-padre.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { BotonesTablaComponent } from './shared/botones-tabla/botones-tabla.component';
+import { TablapersonasComponent } from './ejercicios/tablapersonas/tablapersonas.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HomeComponent } from './componentes/home/home.component';
     EjemploNgTemplateComponent,
     HeaderComponent,
     ModuloPadreComponent,
-    HomeComponent
+    HomeComponent,
+    BotonesTablaComponent,
+    TablapersonasComponent
   ],
   imports: [
     BrowserModule,
