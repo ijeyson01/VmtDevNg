@@ -2,7 +2,10 @@
     <form action="" autocomplete="off">
         <div>
             <div class="display-6 ">
-                LOGIN
+                <!-- interpolacion - one binding: atributos en una sola dirección  -->
+                {{
+                    labelLogin 
+                }}
             </div>
             <br>
             <div>
@@ -12,6 +15,8 @@
                          <label for="emailusuario">Usuario</label>
                      </div>
                      <div>
+                        <!-- ngModel es un mecanimo de 2 direcciones que se asocia a un atributo que se puede modificar y se 
+                         ve afectado en la presentacion del HTML y en el component.ts (parte lógica)  -->
                         <input class="form-control" [(ngModel)]="valorData" type="email" (ngModelChange)="mostrarNombre()" name="emailusuario" id="emailusuarioid" placeholder="Ingrese su email">
                      </div>
                      <div>
@@ -28,6 +33,7 @@
                  <br>
                  <div>
                     <div>
+                        <!-- (clic): event binding - event one binding - Eventos en una sola direccion -->
                         <input class="btn btn-primary" type="button" value="Iniciar sesi&oacute;n" (click)="mostrarNombre()">
                     </div>
                     <br>

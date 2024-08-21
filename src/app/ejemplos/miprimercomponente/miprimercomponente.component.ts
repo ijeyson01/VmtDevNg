@@ -17,8 +17,8 @@ export class MiprimercomponenteComponent {
   @Input()
   valorData?: string;
 
-
-  nombreusuario: string = '';
+  labelLogin: string = 'LOGIN';
+  nombreusuario: string = ''; // two way binging
   passwordusuario: string = '';
 
   mostrarNombre() {

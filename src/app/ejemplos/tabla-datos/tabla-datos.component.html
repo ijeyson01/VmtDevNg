@@ -1,29 +1,44 @@
 <!-- Agregar un dropdown con las ciudades -->
 <div>
   <select class="form-select">
-      <option *ngFor="let ciudad of lciudades" [value]="ciudad.idciudad"> {{ ciudad.ciudad }}</option>
+    <option *ngFor="let ciudad of lciudades" [value]="ciudad.idciudad"> {{ ciudad.ciudad }}</option>
   </select>
 </div>
 
 <br>
 <br>
 <div>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombres</th>
-            <th scope="col">Edad</th>
-            <th scope="col">Ciudad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let usuario of lusuarios" >
-            <th scope="row"> {{ usuario.n }}</th>
-            <td>{{ usuario.nombre }}</td>
-            <td>{{ usuario.edad }}</td>
-            <td>{{ usuario.ciudad }} </td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Provincia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of lusuarios">
+        <th scope="row"> {{ usuario.n }}</th>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.edad }}</td>
+        <td>{{ usuario.ciudad }} </td>
+        <td [ngSwitch]="usuario.provinciaid">
+          <ng-template [ngSwitchCase]=1>
+            Guayas
+          </ng-template>
+          <ng-template [ngSwitchCase]=2>
+            Pichincha
+          </ng-template>
+          <ng-template [ngSwitchCase]="3">
+            Manab&iacute;
+          </ng-template>
+          <ng-template [ngSwitchCase]="4">
+            Azuay
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

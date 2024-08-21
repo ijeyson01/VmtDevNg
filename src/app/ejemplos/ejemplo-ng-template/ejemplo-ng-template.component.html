@@ -1,0 +1,15 @@
+<div *ngIf="valorSaludo==='Salu1'; else salu2">
+    <h1>
+        hola mundo
+    </h1>
+    <input type="button" value="Cambiar saludo" (click)="cambiarSaludo()">
+</div>
+
+<ng-template #salu2>
+    <div>
+        <h1>
+            hola mundo 2
+        </h1>
+    </div>
+    <input type="button" value="Cambiar saludo 2" (click)="cambiarSaludo()">
+</ng-template>

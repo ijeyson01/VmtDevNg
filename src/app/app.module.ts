@@ -8,6 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { RegistrousuarioComponent } from './ejemplos/registrousuario/registrousuario.component';
 import { AutenticacionComponent } from './ejemplos/autenticacion/autenticacion.component';
 import { TablaDatosComponent } from './ejemplos/tabla-datos/tabla-datos.component';
+import { EjemploNgTemplateComponent } from './ejemplos/ejemplo-ng-template/ejemplo-ng-template.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { ModuloPadreComponent } from './modulo-padre/modulo-padre.component';
+import { HomeComponent } from './componentes/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { TablaDatosComponent } from './ejemplos/tabla-datos/tabla-datos.componen
     MiprimercomponenteComponent,
     RegistrousuarioComponent,
     AutenticacionComponent,
-    TablaDatosComponent
+    TablaDatosComponent,
+    EjemploNgTemplateComponent,
+    HeaderComponent,
+    ModuloPadreComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
