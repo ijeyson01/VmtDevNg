@@ -1,1 +1,41 @@
-<p>tablapersonas works!</p>
+<table
+ class="table">
+    <thead>
+        <th>Id</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Fecha de nacimiento</th>
+        <th>G&eacute;nero</th>
+        <th>Tel&eacute;fono</th>
+        <th>Ciudad</th>
+        <th>Nivel de estudios</th>
+        <th>Opciones</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let persona of dataPersonas">
+        <td> {{ persona.id }} </td>
+        <td> {{ persona.nombres }} </td>
+        <td> {{ persona.apellidos }} </td>
+        <td> {{ persona.fecha_nacimiento }} </td>
+        <td [ngSwitch]="persona.genero" > 
+        <ng-template [ngSwitchCase]="'M'">
+            Masculino
+        </ng-template>
+        <ng-template [ngSwitchCase]="'F'">
+            Femenino
+        </ng-template>    
+        </td>
+        <td> {{ persona.telefono }} </td>
+        <td> {{ persona.ciudad }} </td>
+        <td [ngSwitch]="persona.nivel_estudios">
+            <ng-template [ngSwitchCase]="'Licenciatura'"> <i class="bi bi-clipboard2-check"> </i> {{ persona.nivel_estudios }}</ng-template>
+            <ng-template [ngSwitchCase]="'Maestría'"> <i class="bi bi-cloud-drizzle"></i> {{ persona.nivel_estudios }}</ng-template>
+            <ng-template [ngSwitchCase]="'Doctorado'"> <i class="bi bi-compass-fill"></i> {{ persona.nivel_estudios }}</ng-template>
+            <ng-template [ngSwitchCase]="'Ingeniería'"><i class="bi bi-cpu"></i> {{ persona.nivel_estudios }}</ng-template>
+        </td>
+        <td>
+            <app-botondinamico [labelBoton]="'Actualizar'" (eventoRegistro)="funcionPersona($event)" [registroPersona]="persona"></app-botondinamico>
+        </td>
+        </tr>
+    </tbody>
+</table>

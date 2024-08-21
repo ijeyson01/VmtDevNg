@@ -14,6 +14,7 @@ import { ModuloPadreComponent } from './modulo-padre/modulo-padre.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { BotonesTablaComponent } from './shared/botones-tabla/botones-tabla.component';
 import { TablapersonasComponent } from './ejercicios/tablapersonas/tablapersonas.component';
+import { BotondinamicoComponent } from './shared/botondinamico/botondinamico.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TablapersonasComponent } from './ejercicios/tablapersonas/tablapersonas
     ModuloPadreComponent,
     HomeComponent,
     BotonesTablaComponent,
-    TablapersonasComponent
+    TablapersonasComponent,
+    BotondinamicoComponent
   ],
   imports: [
     BrowserModule,
