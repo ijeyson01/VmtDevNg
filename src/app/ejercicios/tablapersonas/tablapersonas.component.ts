@@ -17,4 +17,8 @@ export class TablapersonasComponent {
   funcionPersona(persona: Persona) {
     console.log(persona);
   }
+
+  funcionEliminar(persona: any) {
+    alert('Hola');
+  }
 }

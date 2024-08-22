@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-botones-tabla',
@@ -18,5 +18,18 @@ export class BotonesTablaComponent {
   @Input()
   labelBtn2: string = 'Borrar';
 
+  @Input()
+  dataRegistro: any;
 
+  @Output() eventoBtn1 = new EventEmitter<any>();
+
+  @Output() eventoBtn2 = new EventEmitter<any>();
+
+  fnEventoBtn1(){
+    this.eventoBtn1.emit(this.dataRegistro);
+  }
+
+  fnEventoBtn2(){
+    this.eventoBtn2.emit(this.dataRegistro);
+  }
 }

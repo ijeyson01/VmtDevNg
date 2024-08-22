@@ -34,7 +34,7 @@
             <ng-template [ngSwitchCase]="'Ingeniería'"><i class="bi bi-cpu"></i> {{ persona.nivel_estudios }}</ng-template>
         </td>
         <td>
-            <app-botondinamico [labelBoton]="'Actualizar'" (eventoRegistro)="funcionPersona($event)" [registroPersona]="persona"></app-botondinamico>
+            <app-botones-tabla [labelBtn1]="'Actualizar'" [labelBtn2]="'Quitar'" (eventoBtn1)="funcionPersona($event)" (eventoBtn2)="funcionEliminar($event)" [dataRegistro]="persona"></app-botones-tabla>
         </td>
         </tr>
     </tbody>
