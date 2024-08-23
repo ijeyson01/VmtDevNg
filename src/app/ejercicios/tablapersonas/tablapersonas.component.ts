@@ -21,4 +21,8 @@ export class TablapersonasComponent {
   funcionEliminar(persona: any) {
     alert('Hola');
   }
+
+  actualizarPersona(persona: Persona) {
+    
+  }
 }

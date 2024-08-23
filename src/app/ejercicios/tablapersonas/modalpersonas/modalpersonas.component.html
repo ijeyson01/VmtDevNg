@@ -11,31 +11,31 @@
         <form method="post">
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Nombres:</label>
-            <input type="text" class="form-control" id="recipient-name" required>
+            <input type="text" name="recipient-name" [(ngModel)]="dataPersona.nombres" class="form-control" id="recipient-name" required>
           </div>
           <div class="mb-3">
             <label for="recipient-lastname" class="col-form-label">Apellidos:</label>
-            <input type="text" class="form-control" id="recipient-lastname" required>
+            <input name="recipient-lastname" type="text" [(ngModel)]="dataPersona.apellidos"  class="form-control" id="recipient-lastname" required>
           </div>
           <div class="mb-3">
             <label for="recipient-birthdate" class="col-form-label">Fecha de nacimiento:</label>
-            <input type="text" class="form-control" id="recipient-birthdate" required>
+            <input name="recipient-birthdate" type="text" [(ngModel)]="dataPersona.fecha_nacimiento" class="form-control" id="recipient-birthdate" required>
           </div>
           <div class="mb-3">
             <label for="recipient-genre" class="col-form-label">G&eacute;nero:</label>
-            <input type="text" class="form-control" id="recipient-genre" required>
+            <input name="recipient-genre" type="text" [(ngModel)]="dataPersona.genero" class="form-control" id="recipient-genre" required>
           </div>
           <div class="mb-3">
             <label for="recipient-phone" class="col-form-label">Tel&eacute;fono:</label>
-            <input type="text" class="form-control" id="recipient-phone" required>
+            <input name="recipient-phone" type="text" [(ngModel)]="dataPersona.telefono" class="form-control" id="recipient-phone" required>
           </div>
           <div class="mb-3">
             <label for="recipient-city" class="col-form-label">Ciudad:</label>
-            <input type="text" class="form-control" id="recipient-city" required>
+            <input name="recipient-city" type="text" [(ngModel)]="dataPersona.ciudad" class="form-control" id="recipient-city" required>
           </div>
           <div class="mb-3">
             <label for="recipient-leveleducation" class="col-form-label">Nivel de estudios:</label>
-            <input type="text" class="form-control" id="recipient-leveleducation" required>
+            <input name="recipient-leveleducation" type="text" [(ngModel)]="dataPersona.nivel_estudios" class="form-control" id="recipient-leveleducation" required>
           </div>
           <div class="modal-footer">
             <input type="button" class="btn btn-secondary" value="Cerrar" data-bs-dismiss="modal">
