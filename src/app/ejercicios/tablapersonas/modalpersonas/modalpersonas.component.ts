@@ -25,7 +25,7 @@ export class ModalpersonasComponent {
 
   @Output() eventoGuardar = new EventEmitter<Persona>();
 
-  //@ViewChild( `${mo}`, {static : true}) divModal!: Modal;
+  //@ViewChild(`${this!.modalid}`, {static : true}) divModal!: Modal;
 
 
   guardar() {
@@ -56,10 +56,8 @@ export class ModalpersonasComponent {
 
   cerrarModal() {
     let btnCerrar = document.getElementById('btnCerrarModal');
-    if (btnCerrar) {
-      btnCerrar.addEventListener('click', () => {
-        
-      });
+    if(btnCerrar){
+      btnCerrar?.click();
     }
   }
 
