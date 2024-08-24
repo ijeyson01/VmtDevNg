@@ -16,6 +16,7 @@ import { BotonesTablaComponent } from './shared/botones-tabla/botones-tabla.comp
 import { TablapersonasComponent } from './ejercicios/tablapersonas/tablapersonas.component';
 import { BotondinamicoComponent } from './shared/botondinamico/botondinamico.component';
 import { ModalpersonasComponent } from './ejercicios/tablapersonas/modalpersonas/modalpersonas.component';
+import { TablaproductosComponent } from './ejercicios/tablaproductos/tablaproductos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ModalpersonasComponent } from './ejercicios/tablapersonas/modalpersonas
     BotonesTablaComponent,
     TablapersonasComponent,
     BotondinamicoComponent,
-    ModalpersonasComponent
+    ModalpersonasComponent,
+    TablaproductosComponent
   ],
   imports: [
     BrowserModule,

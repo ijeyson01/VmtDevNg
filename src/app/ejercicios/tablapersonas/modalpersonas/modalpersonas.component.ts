@@ -33,6 +33,5 @@ export class ModalpersonasComponent {
   }
 
   cerrarModal() {
-    var exampleModal = document.getElementById(this.modalid);
   }
 }

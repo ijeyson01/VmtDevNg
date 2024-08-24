@@ -1,0 +1,41 @@
+<table
+ class="table">
+    <thead>
+        <th>N </th>
+        <th>Producto</th>
+        <th>Modelo</th>
+        <th>Proveedor</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Categoria</th>
+        <th>Opciones</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of lproductos">
+        <td> {{ producto.productoid }} </td>
+        <td> {{ producto.producto }} </td>
+        <td> {{ producto.modelo }} </td>
+        <td> {{ producto.proveedor }} </td>
+        <td> {{ producto.precio }} </td>
+        <td> {{ producto.stock }} </td>
+        <td [ngSwitch]="producto.categoria" > 
+        <ng-template [ngSwitchCase]="'OC'">
+            Ocio
+        </ng-template>
+        <ng-template [ngSwitchCase]="'VA'">
+            Varios
+        </ng-template>
+        <ng-template [ngSwitchCase]="'HT'">
+            Salud
+        </ng-template>
+        <ng-template [ngSwitchCase]="'CO'">
+            General
+        </ng-template> 
+        </td>
+        <td>
+            <!-- <app-botones-tabla [labelBtn1]="'Actualizar'" [labelBtn2]="'Quitar'" (eventoBtn1)="funcionPersona($event)" (eventoBtn2)="funcionEliminar($event)" [dataRegistro]="persona"></app-botones-tabla> -->
+             <app-modalpersonas></app-modalpersonas>
+        </td>
+        </tr>
+    </tbody>
+</table>
