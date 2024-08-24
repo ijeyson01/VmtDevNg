@@ -1,14 +1,12 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Persona } from '../../../datasource/persona.interface';
-import bootstrap from 'bootstrap';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-modalpersonas',
   templateUrl: './modalpersonas.component.html'
 })
 export class ModalpersonasComponent {
-
-  constructor() { }
 
   @Input()
   modalid: string = 'modalejemplo';
@@ -27,11 +25,14 @@ export class ModalpersonasComponent {
 
   @Output() eventoGuardar = new EventEmitter<Persona>();
 
+  //@ViewChild( `${mo}`, {static : true}) divModal!: Modal;
+
+
   guardar() {
-    if (!this.validarGuardar()) {
-      this.eventoGuardar.emit(this.dataPersona);
-      this.cerrarModal();
-    }
+    // if (!this.validarGuardar()) {
+    this.eventoGuardar.emit(this.dataPersona);
+    this.cerrarModal();
+    //  }
   }
 
   validarGuardar(): boolean {
@@ -54,6 +55,12 @@ export class ModalpersonasComponent {
   }
 
   cerrarModal() {
+    let btnCerrar = document.getElementById('btnCerrarModal');
+    if (btnCerrar) {
+      btnCerrar.addEventListener('click', () => {
+        
+      });
+    }
   }
 
   validarEstaVacio(value: any) {

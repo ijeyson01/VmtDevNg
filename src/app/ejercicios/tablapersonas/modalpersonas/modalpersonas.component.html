@@ -40,15 +40,15 @@
           <div class="mb-3">
             <label for="recipient-leveleducation" class="col-form-label">Nivel de estudios:</label>
             <select name="recipient-leveleducation" type="text" [(ngModel)]="dataPersona.nivel_estudios" class="form-control" id="recipient-leveleducation" required>
-              <option value="Maestria">Maestria</option>
+              <option value="Maestría">Maestria</option>
               <option value="Licenciatura">Licenciatura</option>
               <option value="Doctorado">Doctorado</option>
-              <option value="Ingenieria">Ingenieria</option>
+              <option value="Ingeniería">Ingenieria</option>
             </select>
           </div>
           <div class="modal-footer">
-            <input type="button" class="btn btn-secondary" value="Cerrar" data-bs-dismiss="modal">
-            <input type="button" class="btn btn-primary" value="Guardar" (click)="guardar()">
+            <input type="button" id="btnCerrarModal" class="btn btn-secondary" value="Cerrar" data-bs-dismiss="modal">
+            <input type="button"  class="btn btn-primary" value="Guardar" (click)="guardar()">
           </div>
         </form>
       </div>

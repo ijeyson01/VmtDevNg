@@ -26,6 +26,9 @@ export class TablapersonasComponent {
     
   }
   guardarPersona(persona: Persona) {
-    
+    if(persona.id == 0){
+     persona.id =  lpersona.length +1
+    }
+    lpersona.push(persona);
   }
 }
