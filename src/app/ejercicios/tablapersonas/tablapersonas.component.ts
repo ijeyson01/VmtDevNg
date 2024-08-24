@@ -25,4 +25,7 @@ export class TablapersonasComponent {
   actualizarPersona(persona: Persona) {
     
   }
+  guardarPersona(persona: Persona) {
+    
+  }
 }

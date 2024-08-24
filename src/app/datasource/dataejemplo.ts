@@ -100,7 +100,7 @@ export const lpersona = [
         "telefono": "555-5319",
         "ciudad": "Córdoba",
         "nivel_estudios": "Licenciatura"
-    },
+    }/*,
     {
         "id": 11,
         "nombres": "Alberto",
@@ -440,7 +440,7 @@ export const lpersona = [
         "telefono": "555-7531",
         "ciudad": "Linares",
         "nivel_estudios": "Doctorado"
-    }
+    }*/
 ]
 
 export const listaproducto: ProductDetail[] = [
@@ -468,7 +468,7 @@ export const listaproducto: ProductDetail[] = [
       "modelo": "MP-2001-A",
       "proveedor": "Juan Marcet",
       "precio": 10.00,
-      "stock": 3,
+      "stock": 1,
       "categoria": "VA"
     },
     {
@@ -486,7 +486,7 @@ export const listaproducto: ProductDetail[] = [
       "modelo": "ZY 2020",
       "proveedor": "Hometech",
       "precio": 230.00,
-      "stock": 20,
+      "stock": 0,
       "categoria": "CO"
     }
 ]

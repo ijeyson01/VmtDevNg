@@ -7,6 +7,7 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Persona</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div id="divMensaje"></div>
       <div class="modal-body">
         <form method="post">
           <div class="mb-3">
@@ -19,11 +20,14 @@
           </div>
           <div class="mb-3">
             <label for="recipient-birthdate" class="col-form-label">Fecha de nacimiento:</label>
-            <input name="recipient-birthdate" type="text" [(ngModel)]="dataPersona.fecha_nacimiento" class="form-control" id="recipient-birthdate" required>
+            <input name="recipient-birthdate" type="date" [(ngModel)]="dataPersona.fecha_nacimiento" class="form-control" id="recipient-birthdate" required>
           </div>
           <div class="mb-3">
             <label for="recipient-genre" class="col-form-label">G&eacute;nero:</label>
-            <input name="recipient-genre" type="text" [(ngModel)]="dataPersona.genero" class="form-control" id="recipient-genre" required>
+            <select name="recipient-genre" type="text" [(ngModel)]="dataPersona.genero" class="form-control" id="recipient-genre" required>
+              <option value="M"> Masculino</option>
+              <option value="F"> Femenino</option>
+            </select>
           </div>
           <div class="mb-3">
             <label for="recipient-phone" class="col-form-label">Tel&eacute;fono:</label>
@@ -35,7 +39,12 @@
           </div>
           <div class="mb-3">
             <label for="recipient-leveleducation" class="col-form-label">Nivel de estudios:</label>
-            <input name="recipient-leveleducation" type="text" [(ngModel)]="dataPersona.nivel_estudios" class="form-control" id="recipient-leveleducation" required>
+            <select name="recipient-leveleducation" type="text" [(ngModel)]="dataPersona.nivel_estudios" class="form-control" id="recipient-leveleducation" required>
+              <option value="Maestria">Maestria</option>
+              <option value="Licenciatura">Licenciatura</option>
+              <option value="Doctorado">Doctorado</option>
+              <option value="Ingenieria">Ingenieria</option>
+            </select>
           </div>
           <div class="modal-footer">
             <input type="button" class="btn btn-secondary" value="Cerrar" data-bs-dismiss="modal">

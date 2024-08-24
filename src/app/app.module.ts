@@ -17,6 +17,7 @@ import { TablapersonasComponent } from './ejercicios/tablapersonas/tablapersonas
 import { BotondinamicoComponent } from './shared/botondinamico/botondinamico.component';
 import { ModalpersonasComponent } from './ejercicios/tablapersonas/modalpersonas/modalpersonas.component';
 import { TablaproductosComponent } from './ejercicios/tablaproductos/tablaproductos.component';
+import { StockpipePipe } from './shared/pipes/stockpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TablaproductosComponent } from './ejercicios/tablaproductos/tablaproduc
     TablapersonasComponent,
     BotondinamicoComponent,
     ModalpersonasComponent,
-    TablaproductosComponent
+    TablaproductosComponent,
+    StockpipePipe
   ],
   imports: [
     BrowserModule,

@@ -13,11 +13,11 @@
     <tbody>
         <tr *ngFor="let producto of lproductos">
         <td> {{ producto.productoid }} </td>
-        <td> {{ producto.producto }} </td>
+        <td> {{ producto.producto | uppercase }} </td>
         <td> {{ producto.modelo }} </td>
         <td> {{ producto.proveedor }} </td>
-        <td> {{ producto.precio }} </td>
-        <td> {{ producto.stock }} </td>
+        <td> {{ producto.precio | currency }} </td>
+        <td> {{ producto.stock | stockpipe: 'Producto' }} </td>
         <td [ngSwitch]="producto.categoria" > 
         <ng-template [ngSwitchCase]="'OC'">
             Ocio
