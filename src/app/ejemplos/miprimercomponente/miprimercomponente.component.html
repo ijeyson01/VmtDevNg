@@ -17,7 +17,7 @@
                      <div>
                         <!-- ngModel es un mecanimo de 2 direcciones que se asocia a un atributo que se puede modificar y se 
                          ve afectado en la presentacion del HTML y en el component.ts (parte lógica)  -->
-                        <input class="form-control" [(ngModel)]="valorData" type="email" (ngModelChange)="mostrarNombre()" name="emailusuario" id="emailusuarioid" placeholder="Ingrese su email">
+                        <input class="form-control" [(ngModel)]="emailusuario" type="email" (ngModelChange)="mostrarNombre()" name="emailusuario" id="emailusuarioid" placeholder="Ingrese su email">
                      </div>
                      <div>
                         <label for="contraseniapassword">Contrase&ntilde;a</label>
@@ -34,7 +34,7 @@
                  <div>
                     <div>
                         <!-- (clic): event binding - event one binding - Eventos en una sola direccion -->
-                        <input class="btn btn-primary" type="button" value="Iniciar sesi&oacute;n" (click)="mostrarNombre()">
+                        <input class="btn btn-primary" type="button" value="Iniciar sesi&oacute;n" (click)="login()">
                     </div>
                     <br>
                     <div>

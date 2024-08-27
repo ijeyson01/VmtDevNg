@@ -18,6 +18,7 @@ import { BotondinamicoComponent } from './shared/botondinamico/botondinamico.com
 import { ModalpersonasComponent } from './ejercicios/tablapersonas/modalpersonas/modalpersonas.component';
 import { TablaproductosComponent } from './ejercicios/tablaproductos/tablaproductos.component';
 import { StockpipePipe } from './shared/pipes/stockpipe.pipe';
+import { PersonaModule } from './modulos/persona/persona.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { StockpipePipe } from './shared/pipes/stockpipe.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    PersonaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

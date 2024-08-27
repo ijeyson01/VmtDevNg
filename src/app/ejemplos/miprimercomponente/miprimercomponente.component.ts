@@ -14,21 +14,27 @@ export class MiprimercomponenteComponent {
   @Output()
   banderaAutenticacion = new EventEmitter<string>();
 
+  @Output() loginEvent = new EventEmitter();
+
   @Input()
   valorData?: string;
 
   labelLogin: string = 'LOGIN';
-  nombreusuario: string = ''; // two way binging
+  emailusuario: string = ''; // two way binging
   passwordusuario: string = '';
 
   mostrarNombre() {
     console.log({
-      'usuario': this.nombreusuario, 
+      'usuario': this.emailusuario, 
       'pass': this.passwordusuario
     });
   }
 
   eventoCambioPantalla(){
     this.banderaAutenticacion.emit("REGISTRO");
+  }
+
+  login() {
+    this.loginEvent.emit();
   }
 }
