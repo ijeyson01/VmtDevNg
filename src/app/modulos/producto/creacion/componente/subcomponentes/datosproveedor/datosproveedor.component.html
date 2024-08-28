@@ -1,0 +1,36 @@
+
+<form action="" autocomplete="off">
+    <div>
+        <br>
+        <div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label for="">Nombre</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="nombreProveedor" class="form-control" type="text" placeholder="Ingrese su primer nombre" name="primernombre" id="primernombreid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="segundonombre">Descripción</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="descripcionProveedor" class="form-control" type="text" placeholder="Ingrese su segundo nombre" name="segundonombre" id="segundonombreid">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <label for="primerapellido">Precio proveedor</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="precioProveedor" class="form-control" type="text" placeholder="Ingrese su primer apellido" name="primerapellido" id="primerapellidoid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

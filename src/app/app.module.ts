@@ -19,6 +19,7 @@ import { ModalpersonasComponent } from './ejercicios/tablapersonas/modalpersonas
 import { TablaproductosComponent } from './ejercicios/tablaproductos/tablaproductos.component';
 import { StockpipePipe } from './shared/pipes/stockpipe.pipe';
 import { PersonaModule } from './modulos/persona/persona.module';
+import { CreacionModule } from './modulos/producto/creacion/creacion.module';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PersonaModule } from './modulos/persona/persona.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    PersonaModule
+    PersonaModule,
+    CreacionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

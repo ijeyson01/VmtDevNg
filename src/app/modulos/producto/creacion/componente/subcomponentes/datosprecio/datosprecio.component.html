@@ -1,0 +1,53 @@
+<form action="" autocomplete="off">
+    <div>
+        <br>
+        <div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label for="">Precio unitario</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="precioUnitario" class="form-control" type="text" placeholder="Ingrese su primer nombre" name="primernombre" id="primernombreid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="segundonombre">Aplica IVA</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="aplicaIVA" class="form-control" type="text" placeholder="Ingrese su segundo nombre" name="segundonombre" id="segundonombreid">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label for="primerapellido">Aplica descuento</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="aplicaDescuento" class="form-control" type="text" placeholder="Ingrese su primer apellido" name="primerapellido" id="primerapellidoid">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="segundoapellido">Valor de descuento</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="descuento" class="form-control" type="text" placeholder="Ingrese su segundo apellido" name="segundoapellido" id="segundoapellidoid">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <label for="primerapellido">PVP</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="pvp" class="form-control" type="text" placeholder="Ingrese su primer apellido" name="pvp" id="pvpid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
