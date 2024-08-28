@@ -16,7 +16,11 @@
                         <label for="segundonombre">Aplica IVA</label>
                     </div>
                     <div>
-                        <input [(ngModel)]="aplicaIVA" class="form-control" type="text" placeholder="Ingrese su segundo nombre" name="segundonombre" id="segundonombreid">
+                        <!-- <input [(ngModel)]="aplicaIVA" class="form-control" type="text" placeholder="Ingrese su segundo nombre" name="segundonombre" id="segundonombreid"> -->
+                         <select [(ngModel)]="aplicaIVA" name="aplicaIVA" id="aplicaIVAid">
+                            <option [value]="true">Si</option>
+                            <option [value]="false">No</option>
+                         </select>
                     </div>
                 </div>
             </div>
@@ -26,7 +30,11 @@
                         <label for="primerapellido">Aplica descuento</label>
                     </div>
                     <div>
-                        <input [(ngModel)]="aplicaDescuento" class="form-control" type="text" placeholder="Ingrese su primer apellido" name="primerapellido" id="primerapellidoid">
+                        <!-- <input [(ngModel)]="aplicaDescuento" class="form-control" type="text" placeholder="Ingrese su primer apellido" name="primerapellido" id="primerapellidoid"> -->
+                        <select [(ngModel)]="aplicaDescuento" name="aplicaDescuento" id="aplicaDescuentoid">
+                            <option [value]="true">Si</option>
+                            <option [value]="false">No</option>
+                         </select>
                     </div>
                 </div>
                 <div class="col">

@@ -9,13 +9,13 @@ import { throwError } from 'rxjs';
 export class DatosprecioComponent {
 
   precioUnitario: any;
-  aplicaIVA: any;
+  aplicaIVA!: boolean;
   aplicaDescuento: any;
   descuento: any;
   pvp: any;
 
   validarPrecios() {
-    if(this.aplicaDescuento === 'SI') {
+    if(this.aplicaDescuento) {
       if (this.descuento === "0"){
         alert('El valor del descuento no es válido');
         throwError;
