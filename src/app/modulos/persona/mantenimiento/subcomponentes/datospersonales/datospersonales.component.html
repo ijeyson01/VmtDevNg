@@ -1,4 +1,4 @@
-<form action="" autocomplete="off">
+<form #formDatosPersonales="ngForm" (ngSubmit)="guardarDatosPersonales()" autocomplete="off">
     <div>
         <br>
         <div>
@@ -8,12 +8,14 @@
                         <label for="">Primer nombre</label>
                     </div>
                     <div>
-                        <input class="form-control" type="text" placeholder="Ingrese su primer nombre" name="primernombre" id="primernombreid">
+                        <input class="form-control" [(ngModel)]="primer_nombre" #primernombre="ngModel" [required]="true" [pattern]="'[a-zA-Z ]{2,254}'" type="text" minlength="9" placeholder="Ingrese su primer nombre" name="primernombre" id="primernombreid">
+                        <div [hidden]="primernombre.valid || primernombre.pristine" class="alert alert-danger"> CAMPO INVALIDO </div>
                     </div>
                 </div>
                 <div class="col">
                     <div>
                         <label for="">Segundo nombre</label>
+                    {{ primer_nombre }}
                     </div>
                     <div>
                         <input class="form-control" type="text" placeholder="Ingrese su segundo nombre" name="segundonombre" id="segundonombreid">

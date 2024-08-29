@@ -1,4 +1,4 @@
-<form action="" autocomplete="off">
+<form [formGroup]="frmGroupDatosGaranteRx" action="" autocomplete="off">
     <div>
         <br>
         <div>
@@ -8,7 +8,10 @@
                         <label for="">Nombres del garante</label>
                     </div>
                     <div>
-                        <input class="form-control" type="text" placeholder="Ingrese la forma de pago" name="nombregarante" id="nombregaranteid">
+                        <input formControlName="nombreGarante" class="form-control" type="text" placeholder="Ingrese la forma de pago" name="nombregarante" id="nombregaranteid">
+                        <div *ngIf="frmGroupDatosGaranteRx.get('nombreGarante')?.touched && frmGroupDatosGaranteRx.get('nombreGarante')?.errors?.['required']"> ESTE VALOR ES REQUERIDO</div>
+
+        <div *ngIf="frmGroupDatosGaranteRx.get('nombreGarante')?.touched && frmGroupDatosGaranteRx.get('nombreGarante')?.errors?.['minlength']"> LA LONGITUD MINIMA ES DE {{ frmGroupDatosGaranteRx.get('nombreGarante')?.errors?.['minlength']?.requiredLength }}</div>
                     </div>
                 </div>
                 <div class="col">
@@ -16,7 +19,7 @@
                         <label for="">Relaci&oacute;n del garante</label>
                     </div>
                     <div>
-                        <input class="form-control" type="text" placeholder="Relaci&oacute;n del garante" name="relaciongarante" id="relaciongaranteid">
+                        <input formControlName="relaciongarante" class="form-control" type="text" placeholder="Relaci&oacute;n del garante" name="relaciongarante" id="relaciongaranteid">
                     </div>
                 </div>
             </div>

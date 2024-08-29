@@ -5,6 +5,7 @@ import { DatospersonalesComponent } from './mantenimiento/subcomponentes/datospe
 import { DatosautoComponent } from './mantenimiento/subcomponentes/datosauto/datosauto.component';
 import { DatospagoComponent } from './mantenimiento/subcomponentes/datospago/datospago.component';
 import { DatosgaranteComponent } from './mantenimiento/subcomponentes/datosgarante/datosgarante.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,9 @@ import { DatosgaranteComponent } from './mantenimiento/subcomponentes/datosgaran
     DatosgaranteComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule, // formularios de angular - Modulo de formularios
+    ReactiveFormsModule // formularios reactivos de angular - Modulo de formularios reactivos
   ],
   exports: [
     MantenimientoComponent
