@@ -20,6 +20,7 @@ import { TablaproductosComponent } from './ejercicios/tablaproductos/tablaproduc
 import { StockpipePipe } from './shared/pipes/stockpipe.pipe';
 import { PersonaModule } from './modulos/persona/persona.module';
 import { CreacionModule } from './modulos/producto/creacion/creacion.module';
+import { NotfoundComponent } from './modulos/general/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CreacionModule } from './modulos/producto/creacion/creacion.module';
     BotondinamicoComponent,
     ModalpersonasComponent,
     TablaproductosComponent,
-    StockpipePipe
+    StockpipePipe,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

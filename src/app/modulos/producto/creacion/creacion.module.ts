@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { CreacionRoutingModule } from './creacion-routing.module';
 import { ComponenteComponent } from './componente/componente.component';
 import { DatosproductoComponent } from './componente/subcomponentes/datosproducto/datosproducto.component';
 import { DatosprecioComponent } from './componente/subcomponentes/datosprecio/datosprecio.component';
@@ -7,20 +9,20 @@ import { DatosproveedorComponent } from './componente/subcomponentes/datosprovee
 import { FormsModule } from '@angular/forms';
 
 
-
 @NgModule({
   declarations: [
     ComponenteComponent,
-       DatosproductoComponent,
-       DatosprecioComponent,
-       DatosproveedorComponent
+    DatosproductoComponent,
+    DatosprecioComponent,
+    DatosproveedorComponent
   ],
   imports: [
     CommonModule,
+    CreacionRoutingModule,
     FormsModule
   ],
   exports: [
-    ComponenteComponent,
+    ComponenteComponent
   ]
 })
 export class CreacionModule { }

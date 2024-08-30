@@ -1,12 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
 import { MiprimercomponenteComponent } from '../miprimercomponente/miprimercomponente.component';
 import { RegistrousuarioComponent } from '../registrousuario/registrousuario.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-autenticacion',
-  templateUrl: './autenticacion.component.html'
+  templateUrl: './autenticacion.component.html',
+  providers: [Router]
 })
 export class AutenticacionComponent {
+  
+  constructor(private router: Router){
+  }
 
   @ViewChild(MiprimercomponenteComponent, {static: false}) 
   miPrimerComponente!: MiprimercomponenteComponent;
@@ -30,7 +35,8 @@ export class AutenticacionComponent {
   login() {
     if(this.miPrimerComponente.emailusuario === this.mailUsuario){
       if(this.miPrimerComponente.passwordusuario === this.passUsuario){
-        window.alert("Inicio de sesión satisfactorio");
+        this.router.navigate(['/creacion']);
+
       } else {
         window.alert("Contrasenia incorrecta");
       }

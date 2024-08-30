@@ -24,10 +24,6 @@ export class MiprimercomponenteComponent {
   passwordusuario: string = '';
 
   mostrarNombre() {
-    console.log({
-      'usuario': this.emailusuario, 
-      'pass': this.passwordusuario
-    });
   }
 
   eventoCambioPantalla(){
