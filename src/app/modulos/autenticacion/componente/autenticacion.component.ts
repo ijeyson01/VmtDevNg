@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { MiprimercomponenteComponent } from '../miprimercomponente/miprimercomponente.component';
-import { RegistrousuarioComponent } from '../registrousuario/registrousuario.component';
 import { Router } from '@angular/router';
+import { MiprimercomponenteComponent } from './subcomponentes/miprimercomponente/miprimercomponente.component';
+import { RegistrousuarioComponent } from './subcomponentes/registrousuario/registrousuario.component';
 
 @Component({
   selector: 'app-autenticacion',
@@ -28,7 +28,6 @@ export class AutenticacionComponent {
   mailDefecto = 'cliente@mail.com'
 
   toggleAutentication(dataCambio: string) {
-    console.log(dataCambio);
     this.pantallaPresentacion = dataCambio;
   }
 
@@ -43,8 +42,7 @@ export class AutenticacionComponent {
     } else {
       window.alert("Usuario incorrecto");
     }
+    
+
   }
-
-
-
 }
